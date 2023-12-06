@@ -2,9 +2,9 @@
 
 // You can change the following variables to customize the animation
 $animation-number: 1;
-$bg-color: #000;
 $size: 15vmin;
-$colors: (
+$bg-color: #000;
+$circles-colors: (
   yellow,
   green,
   blue,
@@ -18,9 +18,26 @@ $colors: (
   navy,
   gainsboro
 );
-$font: 'Courier New', Courier, monospace;
 $text-color: blueviolet;
+$text-font: 'Courier New', Courier, monospace;
+$animation-speed: 14s;
+$animation2-speed: 4*$animation-speed;
 
+.text-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: $text-color;
+  font-family: $text-font;
+}
+
+.circle-div {
+  position: absolute;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
 
 body {
   background-color: $bg-color;
@@ -30,95 +47,76 @@ body {
   overflow: hidden;
 
   header {
-    position: absolute;
+    @extend .text-container;
     top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: $text-color;
-    font-family: $font;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin: 0 auto;
+    padding: 0.31rem 0.8rem;
     filter: blur(1px);
-    text-align: center;
 
     h1 {
       font-size: 1.8rem;
       margin: 0 auto;
+      padding: 0%;
     }
   }
 
   >main {
-    position: absolute;
+    @extend .circle-div;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    height: $size;
-    width: $size;
     opacity: 1;
-    border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.1);
+    animation: rotate360 $animation2-speed infinite linear;
 
     div {
-      height: inherit;
-      width: inherit;
+      @extend .circle-div;
       background-color: #fff;
       opacity: 0.5;
-      position: absolute;
-      border-radius: inherit;
       border: 1px solid rgba(255, 255, 255, 1);
 
-      $left: 43.39%;
-      $left2: 2*$left;
-      // $left2: 86.7%;
-      $top: 25%;
-      $y: $animation-number;
-      $x: $animation-number;
-      $circles: (
-        0 $y*2*$top,
-        0 -2*$y*$top,
-        $x*$left $y*$top,
-        -1*$x*$left $y*$top,
-        $left*$x -1*$y*$top,
-        -1*$left*$x -1*$y*$top,
-        $left2*$x 0,
-        -1*$left2*$x 0,
-        $left*$x 3*$y*$top,
-        1*$left*$x -3*$y*$top,
-        -1*$left*$x 3*$y*$top,
-        -1*$left*$x -3*$y*$top
+      $y: $animation-number*25%;
+      $x: $animation-number*43.39%;
+      // $2left: 86.7%;
+      $circles-coords: (
+        0 2*$y,
+        0 -2*$y,
+        $x $y,
+        -1*$x $y,
+        $x -1*$y,
+        -1*$x -1*$y,
+        2*$x 0,
+        -2*$x 0,
+        $x 3*$y,
+        $x -3*$y,
+        -1*$x 3*$y,
+        -1*$x -3*$y
       );
 
-    @for $i from 1 through length($circles) {
-      $coord: nth($circles, $i);
+    @for $i from 1 through length($circles-coords) {
+      $coord: nth($circles-coords, $i);
 
       &:nth-of-type(#{$i}) {
-        background-color: nth($colors, $i);
+        background-color: nth($circles-colors, $i);
         left: nth($coord, 1);
         top: nth($coord, 2);
       }
     }
 
-    animation: rotate360 12s infinite;
+    animation: rotate360 $animation-speed infinite;
   }
 }
 
 footer {
-  position: absolute;
+  @extend .text-container;
   bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-family: $font;
   font-size: 1.1rem;
   padding: 0.5rem;
   filter: blur(0.49px);
 
   a {
-    color: $text-color;
     text-decoration: none;
+    color: $text-color;
   }
 }
 }
