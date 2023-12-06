@@ -1,4 +1,20 @@
 /* Flower of Life (style-2 simplified) animations(s) SCSS made by Rami Al-Saadi in 06/12/2023 */
+.text-container, body footer, body header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: blueviolet;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.circle-div, body > main div, body > main {
+  position: absolute;
+  width: 15vmin;
+  height: 15vmin;
+  border-radius: 50%;
+}
+
 body {
   background-color: #000;
   position: relative;
@@ -7,44 +23,29 @@ body {
   overflow: hidden;
 }
 body header {
-  position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: blueviolet;
-  font-family: "Courier New", Courier, monospace;
-  padding-left: 12px;
-  padding-right: 12px;
-  margin: 0 auto;
+  padding: 0.31rem 0.8rem;
   filter: blur(1px);
-  text-align: center;
 }
 body header h1 {
   font-size: 1.8rem;
   margin: 0 auto;
+  padding: 0%;
 }
 body > main {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  height: 15vmin;
-  width: 15vmin;
   opacity: 1;
-  border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.5);
   background-color: rgba(255, 255, 255, 0.1);
+  animation: rotate360 56s infinite linear;
 }
 body > main div {
-  height: inherit;
-  width: inherit;
   background-color: #fff;
   opacity: 0.5;
-  position: absolute;
-  border-radius: inherit;
   border: 1px solid rgb(255, 255, 255);
-  animation: rotate360 12s infinite;
+  animation: rotate360 14s infinite;
 }
 body > main div:nth-of-type(1) {
   background-color: yellow;
@@ -107,19 +108,14 @@ body > main div:nth-of-type(12) {
   top: -75%;
 }
 body footer {
-  position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-family: "Courier New", Courier, monospace;
   font-size: 1.1rem;
   padding: 0.5rem;
   filter: blur(0.49px);
 }
 body footer a {
-  color: blueviolet;
   text-decoration: none;
+  color: blueviolet;
 }
 
 @keyframes rotate360 {
