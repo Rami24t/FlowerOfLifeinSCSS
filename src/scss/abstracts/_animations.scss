@@ -1,0 +1,8 @@
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/animations made by Rami Al-Saadi in 06/12/2023 */
+@keyframes rotate360 {
+    @for $i from 0 through 6 {
+        #{$i*16.66666666666667}% {
+            transform: rotate(-#{$i * 60}deg);
+        }
+    }
+}

@@ -1,0 +1,16 @@
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/footer made by Rami Al-Saadi in 06/12/2023 */
+@use "../abstracts/variables" as *;
+@use "../abstracts/classes";
+
+footer {
+    @extend .text-container;
+    bottom: 0;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    filter: blur(0.49px);
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+    }
+}

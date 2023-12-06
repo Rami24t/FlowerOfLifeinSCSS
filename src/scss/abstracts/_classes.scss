@@ -1,0 +1,11 @@
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/classes made by Rami Al-Saadi in 06/12/2023 */
+@use "variables" as *;
+
+.text-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: $text-color;
+    font-family: $text-font;
+}

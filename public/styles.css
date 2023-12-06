@@ -1,5 +1,38 @@
-/* Flower of Life (style-2 simplified) animations(s) SCSS made by Rami Al-Saadi in 06/12/2023 */
-.text-container, body footer, body header {
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles made by Rami Al-Saadi in 06/12/2023 */
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles made by Rami Al-Saadi in 06/12/2023 */
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/main made by Rami Al-Saadi in 06/12/2023 */
+/* Flower of Life (style-2 simplified) animations(s) SCSS/_variables made by Rami Al-Saadi in 06/12/2023 */
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/main made by Rami Al-Saadi in 06/12/2023 */
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/mixins made by Rami Al-Saadi in 06/12/2023 */
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/animations made by Rami Al-Saadi in 06/12/2023 */
+@keyframes rotate360 {
+  0% {
+    transform: rotate(-0deg);
+  }
+  16.6666666667% {
+    transform: rotate(-60deg);
+  }
+  33.3333333333% {
+    transform: rotate(-120deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  66.6666666667% {
+    transform: rotate(-240deg);
+  }
+  83.3333333333% {
+    transform: rotate(-300deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/layout made by Rami Al-Saadi in 06/12/2023 */
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/header made by Rami Al-Saadi in 06/12/2023 */
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/main made by Rami Al-Saadi in 06/12/2023 */
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/classes made by Rami Al-Saadi in 06/12/2023 */
+.text-container, footer, header {
   position: absolute;
   left: 0;
   right: 0;
@@ -8,11 +41,29 @@
   font-family: "Courier New", Courier, monospace;
 }
 
-.circle-div, body > main div, body > main {
-  position: absolute;
-  width: 15vmin;
-  height: 15vmin;
-  border-radius: 50%;
+header {
+  top: 0;
+  padding: 0.31rem 0.8rem;
+  filter: blur(1px);
+}
+header h1 {
+  font-size: 1.8rem;
+  margin: 0 auto;
+  padding: 0%;
+}
+
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/main made by Rami Al-Saadi in 06/12/2023 */
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/header made by Rami Al-Saadi in 06/12/2023 */
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/footer made by Rami Al-Saadi in 06/12/2023 */
+footer {
+  bottom: 0;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  filter: blur(0.49px);
+}
+footer a {
+  text-decoration: none;
+  color: blueviolet;
 }
 
 body {
@@ -22,29 +73,27 @@ body {
   width: 100%;
   overflow: hidden;
 }
-body header {
-  top: 0;
-  padding: 0.31rem 0.8rem;
-  filter: blur(1px);
-}
-body header h1 {
-  font-size: 1.8rem;
-  margin: 0 auto;
-  padding: 0%;
-}
 body > main {
+  position: absolute;
+  width: 15vmin;
+  height: 15vmin;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  animation: rotate360 56s infinite linear;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  opacity: 1;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background-color: rgba(255, 255, 255, 0.1);
-  animation: rotate360 56s infinite linear;
 }
 body > main div {
+  position: absolute;
+  width: 15vmin;
+  height: 15vmin;
+  border-radius: 50%;
   background-color: #fff;
-  opacity: 0.5;
   border: 1px solid rgb(255, 255, 255);
+  opacity: 0.5;
   animation: rotate360 14s infinite;
 }
 body > main div:nth-of-type(1) {
@@ -106,40 +155,6 @@ body > main div:nth-of-type(12) {
   background-color: gainsboro;
   left: -43.39%;
   top: -75%;
-}
-body footer {
-  bottom: 0;
-  font-size: 1.1rem;
-  padding: 0.5rem;
-  filter: blur(0.49px);
-}
-body footer a {
-  text-decoration: none;
-  color: blueviolet;
-}
-
-@keyframes rotate360 {
-  0% {
-    transform: rotate(-0deg);
-  }
-  16.6666666667% {
-    transform: rotate(-60deg);
-  }
-  33.3333333333% {
-    transform: rotate(-120deg);
-  }
-  50% {
-    transform: rotate(-180deg);
-  }
-  66.6666666667% {
-    transform: rotate(-240deg);
-  }
-  83.3333333333% {
-    transform: rotate(-300deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
