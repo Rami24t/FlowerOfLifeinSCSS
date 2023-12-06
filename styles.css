@@ -9,30 +9,39 @@
   0% {
     transform: rotate(-0deg);
   }
+
   16.6666666667% {
     transform: rotate(-60deg);
   }
+
   33.3333333333% {
     transform: rotate(-120deg);
   }
+
   50% {
     transform: rotate(-180deg);
   }
+
   66.6666666667% {
     transform: rotate(-240deg);
   }
+
   83.3333333333% {
     transform: rotate(-300deg);
   }
+
   100% {
     transform: rotate(-360deg);
   }
 }
+
 /* Flower of Life (style-2 simplified) animations(s) SCSS styles/layout made by Rami Al-Saadi in 06/12/2023 */
 /* Flower of Life (style-2 simplified) animations(s) SCSS styles/header made by Rami Al-Saadi in 06/12/2023 */
 /* Flower of Life (style-2 simplified) animations(s) SCSS styles/main made by Rami Al-Saadi in 06/12/2023 */
 /* Flower of Life (style-2 simplified) animations(s) SCSS styles/classes made by Rami Al-Saadi in 06/12/2023 */
-.text-container, footer, header {
+.text-container,
+footer,
+header {
   position: absolute;
   left: 0;
   right: 0;
@@ -46,6 +55,7 @@ header {
   padding: 0.31rem 0.8rem;
   filter: blur(1px);
 }
+
 header h1 {
   font-size: 1.8rem;
   margin: 0 auto;
@@ -61,6 +71,7 @@ footer {
   padding: 0.5rem;
   filter: blur(0.49px);
 }
+
 footer a {
   text-decoration: none;
   color: blueviolet;
@@ -73,7 +84,8 @@ body {
   width: 100%;
   overflow: hidden;
 }
-body > main {
+
+body>main {
   position: absolute;
   width: 15vmin;
   height: 15vmin;
@@ -86,7 +98,8 @@ body > main {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-body > main div {
+
+body>main div {
   position: absolute;
   width: 15vmin;
   height: 15vmin;
@@ -96,65 +109,75 @@ body > main div {
   opacity: 0.5;
   animation: rotate360 14s infinite;
 }
-body > main div:nth-of-type(1) {
+
+body>main div:nth-of-type(1) {
   background-color: yellow;
   left: 0;
   top: 50%;
 }
-body > main div:nth-of-type(2) {
+
+body>main div:nth-of-type(2) {
   background-color: green;
   left: 0;
   top: -50%;
 }
-body > main div:nth-of-type(3) {
+
+body>main div:nth-of-type(3) {
   background-color: blue;
   left: 43.39%;
   top: 25%;
 }
-body > main div:nth-of-type(4) {
+
+body>main div:nth-of-type(4) {
   background-color: red;
   left: -43.39%;
   top: 25%;
 }
-body > main div:nth-of-type(5) {
+
+body>main div:nth-of-type(5) {
   background-color: orange;
   left: 43.39%;
   top: -25%;
 }
-body > main div:nth-of-type(6) {
+
+body>main div:nth-of-type(6) {
   background-color: yellowgreen;
   left: -43.39%;
   top: -25%;
 }
-body > main div:nth-of-type(7) {
+
+body>main div:nth-of-type(7) {
   background-color: violet;
   left: 86.78%;
   top: 0;
 }
-body > main div:nth-of-type(8) {
+
+body>main div:nth-of-type(8) {
   background-color: mediumseagreen;
   left: -86.78%;
   top: 0;
 }
-body > main div:nth-of-type(9) {
+
+body>main div:nth-of-type(9) {
   background-color: brown;
   left: 43.39%;
   top: 75%;
 }
-body > main div:nth-of-type(10) {
+
+body>main div:nth-of-type(10) {
   background-color: turquoise;
   left: 43.39%;
   top: -75%;
 }
-body > main div:nth-of-type(11) {
+
+body>main div:nth-of-type(11) {
   background-color: navy;
   left: -43.39%;
   top: 75%;
 }
-body > main div:nth-of-type(12) {
+
+body>main div:nth-of-type(12) {
   background-color: gainsboro;
   left: -43.39%;
   top: -75%;
 }
-
-/*# sourceMappingURL=styles.css.map */
