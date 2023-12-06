@@ -1,0 +1,132 @@
+/* Flower of Life (style-2 simplified) animations(s) SCSS made by Rami Al-Saadi in 06/12/2023 */
+
+// You can change the following variables to customize the animation
+$animation-number: 1;
+$bg-color: #000;
+$size: 15vmin;
+$colors: (
+  yellow,
+  green,
+  blue,
+  red,
+  orange,
+  yellowgreen,
+  violet,
+  mediumseagreen,
+  brown,
+  turquoise,
+  navy,
+  gainsboro
+);
+$font: 'Courier New', Courier, monospace;
+$text-color: blueviolet;
+
+
+body {
+  background-color: $bg-color;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: $text-color;
+    font-family: $font;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 0 auto;
+    filter: blur(1px);
+    text-align: center;
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0 auto;
+    }
+  }
+
+  >main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: $size;
+    width: $size;
+    opacity: 1;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+
+    div {
+      height: inherit;
+      width: inherit;
+      background-color: #fff;
+      opacity: 0.5;
+      position: absolute;
+      border-radius: inherit;
+      border: 1px solid rgba(255, 255, 255, 1);
+
+      $left: 43.39%;
+      $left2: 2*$left;
+      // $left2: 86.7%;
+      $top: 25%;
+      $y: $animation-number;
+      $x: $animation-number;
+      $circles: (
+        0 $y*2*$top,
+        0 -2*$y*$top,
+        $x*$left $y*$top,
+        -1*$x*$left $y*$top,
+        $left*$x -1*$y*$top,
+        -1*$left*$x -1*$y*$top,
+        $left2*$x 0,
+        -1*$left2*$x 0,
+        $left*$x 3*$y*$top,
+        1*$left*$x -3*$y*$top,
+        -1*$left*$x 3*$y*$top,
+        -1*$left*$x -3*$y*$top
+      );
+
+    @for $i from 1 through length($circles) {
+      $coord: nth($circles, $i);
+
+      &:nth-of-type(#{$i}) {
+        background-color: nth($colors, $i);
+        left: nth($coord, 1);
+        top: nth($coord, 2);
+      }
+    }
+
+    animation: rotate360 12s infinite;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: $font;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  filter: blur(0.49px);
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+}
+
+@keyframes rotate360 {
+  @for $i from 0 through 6 {
+    #{$i*16.66666666666667}% {
+      transform: rotate(-#{$i * 60}deg);
+    }
+  }
+}

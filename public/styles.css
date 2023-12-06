@@ -1,0 +1,149 @@
+/* Flower of Life (style-2 simplified) animations(s) SCSS made by Rami Al-Saadi in 06/12/2023 */
+body {
+  background-color: #000;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+body header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: blueviolet;
+  font-family: "Courier New", Courier, monospace;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 0 auto;
+  filter: blur(1px);
+  text-align: center;
+}
+body header h1 {
+  font-size: 1.8rem;
+  margin: 0 auto;
+}
+body > main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 15vmin;
+  width: 15vmin;
+  opacity: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body > main div {
+  height: inherit;
+  width: inherit;
+  background-color: #fff;
+  opacity: 0.5;
+  position: absolute;
+  border-radius: inherit;
+  border: 1px solid rgb(255, 255, 255);
+  animation: rotate360 12s infinite;
+}
+body > main div:nth-of-type(1) {
+  background-color: yellow;
+  left: 0;
+  top: 50%;
+}
+body > main div:nth-of-type(2) {
+  background-color: green;
+  left: 0;
+  top: -50%;
+}
+body > main div:nth-of-type(3) {
+  background-color: blue;
+  left: 43.39%;
+  top: 25%;
+}
+body > main div:nth-of-type(4) {
+  background-color: red;
+  left: -43.39%;
+  top: 25%;
+}
+body > main div:nth-of-type(5) {
+  background-color: orange;
+  left: 43.39%;
+  top: -25%;
+}
+body > main div:nth-of-type(6) {
+  background-color: yellowgreen;
+  left: -43.39%;
+  top: -25%;
+}
+body > main div:nth-of-type(7) {
+  background-color: violet;
+  left: 86.78%;
+  top: 0;
+}
+body > main div:nth-of-type(8) {
+  background-color: mediumseagreen;
+  left: -86.78%;
+  top: 0;
+}
+body > main div:nth-of-type(9) {
+  background-color: brown;
+  left: 43.39%;
+  top: 75%;
+}
+body > main div:nth-of-type(10) {
+  background-color: turquoise;
+  left: 43.39%;
+  top: -75%;
+}
+body > main div:nth-of-type(11) {
+  background-color: navy;
+  left: -43.39%;
+  top: 75%;
+}
+body > main div:nth-of-type(12) {
+  background-color: gainsboro;
+  left: -43.39%;
+  top: -75%;
+}
+body footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  filter: blur(0.49px);
+}
+body footer a {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(-0deg);
+  }
+  16.6666666667% {
+    transform: rotate(-60deg);
+  }
+  33.3333333333% {
+    transform: rotate(-120deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  66.6666666667% {
+    transform: rotate(-240deg);
+  }
+  83.3333333333% {
+    transform: rotate(-300deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
