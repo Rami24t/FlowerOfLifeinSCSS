@@ -1,0 +1,13 @@
+{
+  "name": "flowersoflife-animations-scss-js",
+  "author": "rami-alsaadi",
+  "version": "1.0.0",
+  "description": "flowers of life (style-2) animation using scss & js",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./src/styles.scss:./public/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
