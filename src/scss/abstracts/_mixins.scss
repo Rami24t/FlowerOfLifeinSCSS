@@ -1,5 +1,4 @@
 /* Flower of Life (style-2 simplified) animations(s) SCSS styles/mixins made by Rami Al-Saadi in 06/12/2023-07/12/2023 */
-// @use "common-variables" as *;
 
 @mixin circle-div($bg-color, $border, $opacity, $animation, $size) {
     position: absolute;

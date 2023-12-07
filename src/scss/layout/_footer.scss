@@ -5,6 +5,7 @@
 
 footer {
     @extend .text-container;
+    color: $text-color;
     bottom: 0;
     font-size: 1.1rem;
     padding: 0.5rem;

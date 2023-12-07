@@ -64,14 +64,15 @@ header {
   text-align: center;
   font-family: "Courier New", Courier, monospace;
   cursor: pointer;
+  z-index: 999;
 }
 
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/main2 made by Rami Al-Saadi in 06/12/2023 */
 .text-container,
 footer,
 header {
   color: rgba(137, 43, 226, 0.517);
   background-color: #000;
-  z-index: 999;
 }
 
 header {
