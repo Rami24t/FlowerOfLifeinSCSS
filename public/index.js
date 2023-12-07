@@ -1,3 +1,14 @@
+function changeCSS() {
+  console.log(document.querySelector('link').href.includes('styles.css'));
+  if (document.querySelector("link").href.includes('/styles.css')) {
+    document.querySelector("link").href = './styles2.css';
+  }
+  else {
+    document.querySelector("link").href = "./styles.css";
+  }
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".container");
 
