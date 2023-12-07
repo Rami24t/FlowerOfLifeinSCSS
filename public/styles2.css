@@ -1,10 +1,4 @@
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles made by Rami Al-Saadi in 06/12/2023 */
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles made by Rami Al-Saadi in 06/12/2023 */
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles/main made by Rami Al-Saadi in 06/12/2023 */
-/* Flower of Life (style-2 simplified) animations(s) SCSS/_variables made by Rami Al-Saadi in 06/12/2023 */
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles/main made by Rami Al-Saadi in 06/12/2023 */
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles/mixins made by Rami Al-Saadi in 06/12/2023 */
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles/animations made by Rami Al-Saadi in 06/12/2023 */
+/* Flower of Life (style-2 simplified) animations(s) CSS styles2 made by Rami Al-Saadi in 07/12/2023 */
 @keyframes rotate360 {
   0% {
     transform: rotate(-0deg);
@@ -35,10 +29,6 @@
   }
 }
 
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles/layout made by Rami Al-Saadi in 06/12/2023 */
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles/header made by Rami Al-Saadi in 06/12/2023 */
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles/main made by Rami Al-Saadi in 06/12/2023 */
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles/classes made by Rami Al-Saadi in 06/12/2023 */
 .text-container,
 footer,
 header {
@@ -76,9 +66,6 @@ header h1::after {
   cursor: pointer;
 }
 
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles/main made by Rami Al-Saadi in 06/12/2023 */
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles/header made by Rami Al-Saadi in 06/12/2023 */
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles/footer made by Rami Al-Saadi in 06/12/2023 */
 footer {
   bottom: 0;
   font-size: 1.1rem;
