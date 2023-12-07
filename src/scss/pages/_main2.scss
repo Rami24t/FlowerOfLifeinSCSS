@@ -1,0 +1,19 @@
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/main2 made by Rami Al-Saadi in 06/12/2023 */
+
+@use "../abstracts/common-variables" as *;
+@use "../abstracts/variables2" as *;
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/animations";
+@use "../common";
+@use "../layout2";
+
+body {
+  >main {
+    @include mixin.circle-div(rgba(255, 255, 255, 0), 0px solid rgba(255, 255, 255, 0), 2, (rotate360 $animation2-speed infinite linear, filterAnimation 12s infinite linear alternate), $size);
+
+    div {
+      @include mixin.circle-div(#fff, 1px solid rgba(255, 255, 255, 1), 0.5, rotate360 $animation-speed infinite linear, $size2);
+      @include mixin.draw-circles($animation-number, $circles-colors)
+    }
+  }
+}

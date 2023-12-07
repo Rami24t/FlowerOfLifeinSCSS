@@ -1,0 +1,9 @@
+/* Flower of Life (style-2 simplified) animations(s) SCSS/_variables2 made by Rami Al-Saadi in 06/12/2023 */
+@use "common-variables" as *;
+// You can change the following variables to customize the animation
+$animation-number: 8;
+$size: 2vmin;
+$size2: 3.2vmin;
+$text-color: if(lightness($bg-color) < 50, rgba(137, 43, 226, 0.517), #111);
+$animation-speed: 49s;
+$animation2-speed: 4*$animation-speed;

@@ -1,0 +1,20 @@
+/* Flower of Life (style-2 simplified) animations(s) SCSS/_variables made by Rami Al-Saadi in 06/12/2023 */
+
+// You can change the following variables to customize the animation
+
+$bg-color: #000;
+$circles-colors: (
+  yellow,
+  green,
+  blue,
+  red,
+  orange,
+  yellowgreen,
+  violet,
+  mediumseagreen,
+  brown,
+  turquoise,
+  navy,
+  gainsboro //  rgb(random(255), random(255), random(255)),
+);
+$text-font: 'Courier New', Courier, monospace;

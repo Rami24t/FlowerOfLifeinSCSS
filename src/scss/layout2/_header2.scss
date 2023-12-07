@@ -1,0 +1,25 @@
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/header made by Rami Al-Saadi in 06/12/2023 */
+@use "../abstracts/classes2";
+
+header {
+    @extend .text-container;
+    top: 0;
+    padding: 0.31rem 0.8rem;
+    filter: blur(1px);
+
+    h1 {
+        font-size: 1.8rem;
+        margin: 0 auto;
+        padding: 0%;
+
+        &::after {
+            content: "2";
+            display: block;
+            width: 100%;
+            font-size: 1.5rem;
+            /* background-color: rgba(137, 43, 226, 0.412); */
+            margin: 0.5rem auto;
+            cursor: pointer;
+        }
+    }
+}

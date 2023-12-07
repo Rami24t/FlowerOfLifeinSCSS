@@ -1,7 +1,7 @@
-/* Flower of Life (style-2 simplified) animations(s) SCSS styles/mixins made by Rami Al-Saadi in 06/12/2023 */
-@use 'variables' as *;
+/* Flower of Life (style-2 simplified) animations(s) SCSS styles/mixins made by Rami Al-Saadi in 06/12/2023-07/12/2023 */
+// @use "common-variables" as *;
 
-@mixin circle-div($bg-color, $border, $opacity, $animation) {
+@mixin circle-div($bg-color, $border, $opacity, $animation, $size) {
     position: absolute;
     width: $size;
     height: $size;
@@ -10,4 +10,34 @@
     border: $border;
     opacity: $opacity;
     animation: $animation;
+}
+
+@mixin draw-circles($animation-number: 1, $circles-colors: yellow green blue red orange yellowgreen violet mediumseagreen brown turquoise navy gainsboro) {
+    $y: $animation-number*25%;
+    $x: $animation-number*43.39%;
+    // $2left: 86.7%;
+    $circles-coords: (
+        0 2*$y,
+        0 -2*$y,
+        $x $y,
+        -1*$x $y,
+        $x -1*$y,
+        -1*$x -1*$y,
+        2*$x 0,
+        -2*$x 0,
+        $x 3*$y,
+        $x -3*$y,
+        -1*$x 3*$y,
+        -1*$x -3*$y
+    );
+
+@for $i from 1 through length($circles-coords) {
+    $coord: nth($circles-coords, $i);
+
+    &:nth-of-type(#{$i}) {
+        background-color: nth($circles-colors, $i);
+        left: nth($coord, 1);
+        top: nth($coord, 2);
+    }
+}
 }
