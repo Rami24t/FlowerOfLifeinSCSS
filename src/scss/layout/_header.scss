@@ -1,5 +1,6 @@
 /* Flower of Life (style-2 simplified) animations(s) SCSS styles/header made by Rami Al-Saadi in 06/12/2023 */
 @use "../abstracts/classes";
+@use "../abstracts/variables" as *;
 
 header {
     @extend .text-container;
